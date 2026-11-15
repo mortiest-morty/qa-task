@@ -1,14 +1,20 @@
 import time
+import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 
 def test_complete_purchase():
-    driver = webdriver.Chrome()
+    options = Options()
+    options.add_argument("--window-size=1920,1080")
+    options.browser_version = "157"
+
+    driver = webdriver.Chrome(options=options)
 
     try:
         driver.get("https://www.saucedemo.com")
-        time.sleep(2) 
+        time.sleep(2)
 
         driver.find_element(By.ID, "user-name").send_keys("standard_user")
         driver.find_element(By.ID, "password").send_keys("secret_sauce")
