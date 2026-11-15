@@ -122,8 +122,8 @@ pytest tests/test_api.py -v
 ## Запуск всех тестов
 
 ```bash
-* `pytest tests/test_e2e.py -v` — запуск UI-теста
-* `pytest tests/test_api.py -v` — запуск API-теста
+ `pytest tests/test_e2e.py -v` — запуск UI-теста
+ `pytest tests/test_api.py -v` — запуск API-теста
 ```
 
 ## Безопасность
