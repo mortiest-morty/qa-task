@@ -40,6 +40,7 @@ def test_complete_purchase(driver):
 
     driver.get(SAUCEDEMO_URL)
 
+    # 1. Авторизация
     wait.until(
         EC.visibility_of_element_located((By.ID, "user-name"))
     ).send_keys(SAUCE_USERNAME)
@@ -47,6 +48,7 @@ def test_complete_purchase(driver):
     driver.find_element(By.ID, "password").send_keys(SAUCE_PASSWORD)
     driver.find_element(By.ID, "login-button").click()
 
+    # 2. Добавление товара
     wait.until(
         EC.visibility_of_element_located((By.CLASS_NAME, "inventory_list"))
     )
@@ -63,6 +65,7 @@ def test_complete_purchase(driver):
     )
     assert cart_badge.text == "1"
 
+    # 3. Переход в корзину
     driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
 
     wait.until(
@@ -74,6 +77,7 @@ def test_complete_purchase(driver):
     ).text
     assert item_name == "Sauce Labs Backpack"
 
+    # 4. Оформление заказа (Checkout)
     driver.find_element(By.ID, "checkout").click()
 
     wait.until(
@@ -92,11 +96,13 @@ def test_complete_purchase(driver):
     
     wait.until(EC.element_to_be_clickable((By.ID, "finish")))
 
+    # 5. Проверка товара на странице обзора
     overview_item = driver.find_element(
         By.CLASS_NAME, "inventory_item_name"
     ).text
     assert overview_item == "Sauce Labs Backpack"
 
+    # 6. Завершение покупки
     driver.find_element(By.ID, "finish").click()
 
     success_message = wait.until(
