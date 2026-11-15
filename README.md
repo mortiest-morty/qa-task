@@ -1,3 +1,5 @@
+[![Python Tests](https://github.com/mortiest-morty/qa-task/actions/workflows/ci.yml/badge.svg)](https://github.com/mortiest-morty/qa-task/actions/workflows/ci.yml)
+
 # QA Test Task
 
 Проект содержит два автоматизированных теста:
