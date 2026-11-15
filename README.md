@@ -130,11 +130,3 @@ pytest tests/test_api.py -v
 
 Файл `.env` не должен добавляться в Git. Он уже включён в `.gitignore`.
 
-## Примечание по GitHub API
-
-Для удаления репозитория токен должен иметь права администратора репозитория. Для Fine-grained token нужно разрешение:
-
-```text
-Administration: Read and write
-```
-
