@@ -43,8 +43,10 @@ def test_complete_purchase():
         driver.find_element(By.ID, "postal-code").send_keys("12345")
         driver.find_element(By.ID, "continue").click()
 
-        wait.until(EC.visibility_of_element_located((By.ID, "finish")))
-        
+        finish_button = wait.until(EC.presence_of_element_located((By.ID, "finish")))
+        driver.execute_script("arguments[0].scrollIntoView(true);", finish_button)
+        wait.until(EC.element_to_be_clickable((By.ID, "finish")))
+
         driver.find_element(By.ID, "finish").click()
 
         success_message = wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "complete-header")))
