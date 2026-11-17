@@ -2,6 +2,8 @@
 
 # Тестовое задание QA
 
+[https://github.com/Hexlet/ru-test-assignments/tree/main/qa/effective-mobile](https://github.com/Hexlet/ru-test-assignments/tree/main/qa/effective-mobile)
+
 Проект содержит два автоматизированных теста:
 
 1. E2E UI-тест покупки товара на SauceDemo.
