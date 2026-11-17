@@ -25,8 +25,7 @@ def driver():
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-
-    options.browser_version = "157"   
+    
     browser = webdriver.Chrome(options=options)
     browser.implicitly_wait(2)
 
