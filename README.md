@@ -2,7 +2,7 @@
 
 # Тестовое задание QA
 
-[https://github.com/Hexlet/ru-test-assignments/tree/main/qa/effective-mobile](https://github.com/Hexlet/ru-test-assignments/tree/main/qa/effective-mobile)
+Исходное задание: Effective Mobile, каталог Hexlet - https://github.com/Hexlet/ru-test-assignments/tree/main/qa/effective-mobile
 
 Проект содержит два автоматизированных теста:
 
